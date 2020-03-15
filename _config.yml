@@ -1,8 +1,8 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: ""
-url: ""
+baseurl: "jittorblog"
+url: 
 date_format: "ordinal"
 title: Jittor
 subtitle: "Jittor"
@@ -97,7 +97,7 @@ collections:
         output: true
         permalink: /tutorial/:path/
 
-repository: zhouwy19/blog/
+repository: zhouwy19/jittorblog/
 
 # ---------------- #
 #      Comments    #
