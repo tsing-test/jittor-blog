@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: "jittorblog"
+baseurl: ""
 url: 
 date_format: "ordinal"
 title: Jittor
@@ -110,7 +110,7 @@ comments_provider: gitalk
 disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
-gitment:
+g itment:
     owner: zhouwy19
     repo: blog-comments
     oauth:
