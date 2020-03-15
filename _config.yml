@@ -110,7 +110,7 @@ comments_provider: gitalk
 disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
-g itment:
+gitment:
     owner: zhouwy19
     repo: blog-comments
     oauth:
