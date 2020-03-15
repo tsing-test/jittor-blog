@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: ""
-url: 
+url: http://fit-03.thucg.com:10000
 date_format: "ordinal"
 title: Jittor
 subtitle: "Jittor"
@@ -22,6 +22,10 @@ github_username: zhouwy19
 location: Beijing, China
 email: 
 
+- scope:
+    path: _docs
+    type: docs
+
 # ---------------- #
 #    Navigation    #
 # ---------------- #
@@ -33,6 +37,10 @@ navs:
   -
     href: /tutorial/
     label: 教程
+
+  # -
+  #   href: /docs/
+  #   label: 文档
 
   -
     href: /blog/

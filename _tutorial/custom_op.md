@@ -4,6 +4,8 @@ title: "Custom Op: write your operator with C++ and CUDA and JIT compile it"
 categories: Tutorial
 ---
 
+# Custom Op: write your operator with C++ and CUDA and JIT compile it
+
 > NOTE: This tutorial is still working in progress
 
 In this tutorial, we will show:

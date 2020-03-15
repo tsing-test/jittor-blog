@@ -84,6 +84,7 @@
                 <a href="{{ site.url }}{{ nav.href }}" class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
                 {% endfor %}
                 <a href="https://github.com/Jittor/Jittor" class="site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">Github</a>
+                <a href="{{ site.url }}/assets/docs/index.html" class="site-header-nav-item" target="{{ nav.target | default: _self }}" title="{{ nav.label }}">文档</a>
             </nav>
         </div>
     </header>
