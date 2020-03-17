@@ -8,17 +8,19 @@ menu: 下载
 permalink: /download/
 ---
 
-## Install
+## 安装
 
-Jittor is written in Python and C++. It requires a compiler for JIT compilation, Currently, we support four compilers:
 
-* CPU compiler (require at least one of the following)
-    * g++ (>=5.4.0)
-    * clang (>=8.0) recommend
-* GPU compiler (optional)
-    * nvcc (>=10.0)
+Jittor使用Python和C ++编写。 它需要用于即时编译的编译器。当前，我们支持三种编译器：
 
-We provide single line command for quick installation the latest version of Jittor(Ubuntu>=16.04):
+* CPU 编译器 （需要下列至少一个）
+    - g++ （>=5.4.0）
+    - clang （>=8.0）推荐
+* GPU 编译器（可选）
+    - nvcc（>=10.0）
+
+
+我们提供能快速安装最新版本Jittor的单行命令（Ubuntu> = 16.04）：
 
 ```bash
 # install with clang and cuda
@@ -30,13 +32,17 @@ git clone https://git.net9.org/cjld/jittor.git && with_gcc=1 with_cuda=1 bash ./
 # install with g++
 git clone https://git.net9.org/cjld/jittor.git && with_gcc=1 bash ./jittor/script/install.sh
 ```
-After execution, the script will show some environment variables you need to export.
 
-If you use Jittor for CPU computing, we strongly recommend clang(>=8.0) as the back-end compiler of Jittor. Because some customized optimizations will be enabled.
+执行后，脚本将显示一些需要导出的环境变量。
 
-We will show how to install Jittor in Ubuntu 16.04 step by step, Other Linux distributions may have similar commands.
 
-### Step 1: Choose your back-end compiler
+如果将Jittor用于CPU计算，则强烈建议使用clang（> = 8.0）作为Jittor的后端编译器。 因为Jittor会用到其中一些定制的优化。
+
+
+我们将逐步演示如何在Ubuntu 16.04中安装Jittor，其他Linux发行版可能可以使用类似的命令。
+
+
+### 步骤一：选择您的后端编译器
 
 ```bash
 # g++
@@ -46,18 +52,21 @@ sudo apt install g++ build-essential libomp-dev
 wget -O - https://apt.llvm.org/llvm.sh > /tmp/llvm.sh
 bash /tmp/llvm.sh 8
 ```
-if you choose icc as the back-end compiler, please go to the [offical icc install page](https://software.intel.com/en-us/cpp-compiler-developer-guide-and-reference-compiler-setup).
 
-### Step 2: Install Python and python-dev
-Jittor need python version >= 3.7.
+### 步骤二：安装Python和python-dev
+
+
+Jittor需要python的版本>=3.7。
 
 ```bash
 sudo apt install python3.7 python3.7-dev
 ```
 
-### Step 3: Run Jittor
 
-The whole framework is compiled Just-in-time. Let's install jittor via pip
+### 步骤三：运行Jittor
+
+
+整个框架是及时编译的。 让我们通过pip安装jittor
 
 ```bash
 git clone https://git.net9.org/cjld/jittor.git
@@ -70,10 +79,14 @@ export cc_path="clang-8"
 # run a simple test
 python3.7 -m jittor.test.test_example
 ```
-if the test is passed, your Jittor is ready.
 
-### Optional Step 4: Enable CUDA
-Using CUDA in Jittor is very simple, Just setup environment value `nvcc_path`
+如果通过了测试，那么您的Jittor已经准备就绪。
+
+
+### 可选步骤四：启用CUDA
+
+
+在Jittor中使用CUDA非常简单，只需设置环境值`nvcc_path`
 
 ```bash
 # replace this var with your nvcc location 
@@ -81,17 +94,22 @@ export nvcc_path="/usr/local/cuda/bin/nvcc"
 # run a simple cuda test
 python3.7 -m jittor.test.test_cuda 
 ```
-if the test is passed, your can use Jittor with CUDA by setting `use_cuda` flag.
+
+如果测试通过，则可以通过设置`use_cuda`标识符在Jittor中启用CUDA。
 
 ```python
 import jittor as jt
 jt.flags.use_cuda = 1
 ```
 
-### Optional Step 5: Run full tests
-To check the integrity of Jittor, we can run full tests.
+
+### 可选步骤五：进行完整测试
+
+
+要检查Jittor的完整性，您可以运行完整的测试。
 
 ```bash
 python3.7 -m jittor.test -v
 ```
-if those tests are failed, please report bugs for us, and feel free to contribute ^_^
+
+如果这些测试失败，请为我们报告错误，我们十分欢迎您为Jittor做出贡献^ _ ^

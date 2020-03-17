@@ -8,7 +8,7 @@ menu: 教程
 permalink: /tutorial/
 ---
 
-> Jittor提供以下教程，供大家学习，如有疑问，可以在评论里联系我们。
+> Jittor提供以下教程，供大家学习，如有疑问，可以在Github提Issue里联系我们。
 
 <ul class="listing">
 {% for tutorial in site.tutorial %}

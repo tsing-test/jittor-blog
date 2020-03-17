@@ -2,6 +2,8 @@
 layout: default
 ---
 
+
+
 <section class="banner">
     <div class="collection-head" style="background-image: url(assets/images/bg1.jpg);height:400px;">
         <div class="container">
@@ -11,6 +13,71 @@ layout: default
         </div>
     </div>
 </section>
+
+<div class="container">
+  <h1 class="clickable-header top-level-header">开源新机器学习框架计图Jittor</h1>
+  <hr class="half-rule">
+  <p>深度学习正在统治各个领域，如计算机视觉，自然语言处理，智能机器人。深度学习框架也在最近几年不断进化。我们提出一个全新的开源深度学习框架——计图（Jittor），计图是一个完全基于动态编译（Just-in-time），内部使用创新的元算子和统一计算图的深度学习框架，元算子和Numpy一样易于使用，并且超越Numpy能够实现更复杂更高效的操作。而统一计算图则是融合了静态计算图和动态计算图的诸多优点，在易于使用的同时，提供高性能的优化。基于元算子开发的深度学习模型，可以被计图实时的自动优化并且运行在指定的硬件上，如CPU，GPU。基于这些创新的技术，我们在多种机器视觉任务上能够比同类产品性能提高10%~50%。</p>
+  <hr class="half-rule">
+</div>
+</div>
+
+<div class="container">
+  <h1 class="clickable-header top-level-header">Jittor设计理念</h1>
+  <hr class="half-rule">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>易用且可定制</h4>
+      <p>用户只需要数行代码，就可定义新的算子和模型，在易用的同时，不丧失任何可定制性。</p>
+    </div>
+    <div class="col-sm-4">
+      <h4>实现与优化分离</h4>
+      <p>用户可以通过前端接口专注于实现，而实现自动被后端优化。从而提升前端代码的可读性，以及后端优化的鲁棒性和可重用性。</p>
+    </div>
+    <div class="col-sm-4">
+      <h4>所有都是即时的</h4>
+      <p>Jittor的所有代码都是即时编译并且运行的，包括Jittor本身。用户可以随时对Jittor的所有代码进行修改，并且动态运行。</p>
+    </div>
+  </div>
+  <hr class="half-rule">
+</div>
+
+<!-- <div class="container">
+  <h2 class="bs-docs-featurette-title">Jittor特性</h2>
+  <hr class="half-rule">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>元算子融合</h3>
+      <p>我们将神经网络所需的基本算子定义为元算子，元算子分为三类：重索引，重索引化简，元素级。多个元算子之间可以相互融合成更加复杂的算子，这些复杂算子构成了神经网络计算的多个模块，如卷积层，归一化层等等。这种融合我们称之为元算子融合，可以提升性能，节省资源。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>高阶导数以及反向传播闭包</h3>
+      <p>元算子是反向传播闭包（元算子的反向传播也是元算子）。有了反向传播闭包，我们就可以很方便的计算任意高阶导数。在深度学习算子开发过程中，免去了反向传播算子重复开发工作，同时可以使用统一的优化策略。通过元算子的反向传播闭包，使用元算子实现的算子可以自动实现反向传播算子。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>算子动态编译</h3>
+      <p>Jittor内置元算子编译器，可以将用户通过元算子编写的Python代码，动态编译成高性能的C++代码。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>自动优化</h3>
+      <p>Jittor内置优化编译遍（complier pass），同时和LLVM兼容，这些编译遍会根据硬件设备，自动优化动态编译的代码，常见的优化编译遍有：循环重排，循环分裂，循环融合，数据打包，向量化，GPU并行。这些编译遍对C++代码进一步优化，生成对计算设备友好的底层算子。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>统一内存管理</h3>
+      <p>Jittor使用了统一内存管理，统一GPU和CPU之间的内存。让深度学习模型可以超过GPU存储限制，不再出现GPU内存耗尽的窘境。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>高效同步异步接口</h3>
+      <p>同步接口编程简单，异步接口更加高效，Jittor同时提供这两种接口，同步和异步接口之间的切换不会产生任何性能损失，让用户同时享受到易用性和高效率。</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>模型迁移</h3>
+      <p>Jittor采用和PyTorch较为相似的模块化接口，为了方便大家上手，我们还提供了辅助转换脚本，将PyTorch的模型自动转换成Jittor的模型。在参数保存和数据传输上，Jittor使用和PyTorch一样的 Numpy+pickle 协议，所以Jittor和PyTorch的模型可以相互加载和调用。</p>
+    </div>
+  </div>
+
+  <hr class="half-rule">
+</div> -->
 
 <!-- <section class="collection-head small geopattern" data-pattern-id="{{ page.title | truncate: 15, ''}}">
     <div class="container">
@@ -46,9 +113,9 @@ layout: default
         <!-- <div class="share">
           {% include sns-share.html %}
         </div> -->
-        <div class="comment">
+        <!-- <div class="comment">
           {% include comments.html %}
-        </div>
+        </div> -->
       </div>
       <div class="column one-fourth">
         {% include sidebar-search.html %}

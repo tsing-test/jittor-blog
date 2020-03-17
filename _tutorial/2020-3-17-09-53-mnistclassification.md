@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Jittor MNIST 分类教程"
+title: "【示例2】MNIST图像分类"
 categories: Tutorial
 filename: 2020-03-15-mnistclassification
 ---

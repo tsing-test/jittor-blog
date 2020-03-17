@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "语义分割之 DeepLabV3+"
+title: "【示例4】语义分割之 DeepLabV3+"
 categories: Tutorial
 filename: 2020-03-15-deeplab
 ---
