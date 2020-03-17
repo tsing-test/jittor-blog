@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: ""
-url: http://fit-03.thucg.com:10000
+url: 
 date_format: "ordinal"
 title: Jittor
 subtitle: "Jittor"
@@ -105,7 +105,7 @@ collections:
         output: true
         permalink: /tutorial/:path/
 
-repository: zhouwy19/jittorblog/
+repository: zhouwy19/zhouwy19.github.io/
 
 # ---------------- #
 #      Comments    #
