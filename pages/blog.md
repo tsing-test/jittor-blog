@@ -31,7 +31,7 @@ permalink: /blog/
                 {% for post in site.posts %}
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
-                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                     </h3>
                     <p class="repo-list-description">
                         <!-- {{ post.excerpt | strip_html | strip | truncatewords: 50 }} -->
@@ -44,7 +44,7 @@ permalink: /blog/
                         {% for cat in post.categories %}
                         <span class="meta-info">
                           <span class="octicon octicon-file-directory"></span>
-                          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+                          <a href="{{ site.baseurl }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
                         </span>
                         {% endfor %}
                     </p>
@@ -57,7 +57,7 @@ permalink: /blog/
             <div id="blog-categories">
                 <ul class="list-group">
                     <li class="list-group-item">
-                        <a href="{{ site.url }}/categories/">分类阅读博客</a>
+                        <a href="{{ site.baseurl }}/categories/">分类阅读博客</a>
                     </li>
                 </ul>
             </div>
@@ -73,7 +73,7 @@ permalink: /blog/
                 {% for post in paginator.posts %}
                 <li class="repo-list-item">
                     <h3 class="repo-list-name">
-                      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
                     </h3>
                     <p class="repo-list-description">
                         {{ post.excerpt | strip_html | strip }}
@@ -85,7 +85,7 @@ permalink: /blog/
                         {% for cat in post.categories %}
                         <span class="meta-info">
                           <span class="octicon octicon-file-directory"></span>
-                          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+                          <a href="{{ site.baseurl }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
                         </span>
                         {% endfor %}
                     </p>
@@ -103,9 +103,9 @@ permalink: /blog/
       <div class="btn-group">
         {% if paginator.previous_page %}
           {% if paginator.previous_page == 1 %}
-              <a href="{{ site.url }}/" class="btn btn-outline">&laquo;</a>
+              <a href="{{ site.baseurl }}/" class="btn btn-outline">&laquo;</a>
           {% else %}
-              <a href="{{ site.url }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
+              <a href="{{ site.baseurl }}/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
           {% endif %}
         {% else %}
             <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
@@ -113,17 +113,17 @@ permalink: /blog/
         {% if paginator.page == 1 %}
             <a href="javascript:;" class="active btn btn-outline">1</a>
         {% else %}
-            <a href="{{ site.url }}/"  class="btn btn-outline">1</a>
+            <a href="{{ site.baseurl }}/"  class="btn btn-outline">1</a>
         {% endif %}
         {% for count in (2..paginator.total_pages) %}
           {% if count == paginator.page %}
               <a href="javascript:;"  class="active btn btn-outline">{{count}}</a>
           {% else %}
-              <a href="{{ site.url }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
+              <a href="{{ site.baseurl }}/page{{count}}"  class="btn btn-outline">{{count}}</a>
           {% endif %}
         {% endfor %}
         {% if paginator.next_page %}
-            <a href="{{ site.url }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
+            <a href="{{ site.baseurl }}/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
         {% else %}
             <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
         {% endif %}

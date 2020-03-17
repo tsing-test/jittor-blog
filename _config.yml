@@ -1,7 +1,7 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: "zhouwy19.github.io"
+baseurl: "/jittor-blog"
 url: ""
 date_format: "ordinal"
 title: Jittor

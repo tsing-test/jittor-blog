@@ -169,14 +169,14 @@ help(jt.ops)
 
 
 
-[1]: {{ site.url }}/tutorial/2020-3-17-09-49-basics
-[2]: {{ site.url }}/tutorial/2020-3-17-09-50-meta_op
-[3]: {{ site.url }}/tutorial/2020-3-17-09-51-custom_op
-[4]: {{ site.url }}/tutorial/2020-3-17-09-52-example
-[5]: {{ site.url }}/tutorial/2020-3-17-09-53-mnistclassification
-[6]: {{ site.url }}/tutorial/2020-3-17-09-54-gan
-[7]: {{ site.url }}/tutorial/2020-3-17-09-55-segmentation
-[8]: {{ site.url }}/tutorial/2020-3-17-09-56-ssd
+[1]: {{ site.baseurl }}/tutorial/2020-3-17-09-49-basics
+[2]: {{ site.baseurl }}/tutorial/2020-3-17-09-50-meta_op
+[3]: {{ site.baseurl }}/tutorial/2020-3-17-09-51-custom_op
+[4]: {{ site.baseurl }}/tutorial/2020-3-17-09-52-example
+[5]: {{ site.baseurl }}/tutorial/2020-3-17-09-53-mnistclassification
+[6]: {{ site.baseurl }}/tutorial/2020-3-17-09-54-gan
+[7]: {{ site.baseurl }}/tutorial/2020-3-17-09-55-segmentation
+[8]: {{ site.baseurl }}/tutorial/2020-3-17-09-56-ssd
 
 
 <!-- 这些notebooks可以通过python3.7 -m jittor.notebook在您自己的计算机中运行。 -->

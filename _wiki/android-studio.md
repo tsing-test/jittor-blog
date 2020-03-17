@@ -106,11 +106,11 @@ Cmd --> Command
 
 在 Activity/Fragment 里点击类名前的小图标跳转到关联的 Layout XML 文件：
 
-![jump from class to layout]({{ site.url }}/images/wiki/jump-from-class-to-layout.jpg)
+![jump from class to layout]({{ site.baseurl }}/images/wiki/jump-from-class-to-layout.jpg)
 
 在 Layout XML 文件里点击根节点前的小图标跳转到关联的 Activity/Fragment：
 
-![jump from layout to class]({{ site.url }}/images/wiki/jump-from-layout-to-class.jpg)
+![jump from layout to class]({{ site.baseurl }}/images/wiki/jump-from-layout-to-class.jpg)
 
 ## 插件
 

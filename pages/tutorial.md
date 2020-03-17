@@ -13,7 +13,7 @@ permalink: /tutorial/
 <ul class="listing">
 {% for tutorial in site.tutorial %}
 {% if tutorial.title != "Wiki Template" %}
-<li class="listing-item"><a href="{{ site.url }}{{ tutorial.url }}">{{ tutorial.title }}</a></li>
+<li class="listing-item"><a href="{{ site.baseurl }}{{ tutorial.url }}">{{ tutorial.title }}</a></li>
 {% endif %}
 {% endfor %}
 </ul>

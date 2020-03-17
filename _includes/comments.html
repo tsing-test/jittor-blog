@@ -5,7 +5,7 @@
     <div id="disqus_thread"></div>
     <script>
     var disqus_config = function () {
-        this.page.url = '{{ site.url }}{{ page.url }}';
+        this.page.url = '{{ site.baseurl }}{{ page.url }}';
         this.page.identifier = '{{ page.url }}';
         this.page.title = '{{ page.title }}';
     };
@@ -42,7 +42,7 @@
         <!-- Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 -->
         {% if site.disqus.username == 'mzlogin' %}
           {% assign load_disqus = false %}
-          {% if site.url contains 'mazhuang.org' %}
+          {% if site.baseurl contains 'mazhuang.org' %}
             {% assign load_disqus = true %}
           {% endif %}
         {% endif %}
@@ -50,7 +50,7 @@
           <div id="disqus_thread"></div>
           <script>
             var disqus_config = function () {
-              this.page.url = '{{ site.url }}{{ page.url }}';
+              this.page.url = '{{ site.baseurl }}{{ page.url }}';
               this.page.identifier = '{{ page.url }}';
               this.page.title = '{{ page.title }}';
             };
