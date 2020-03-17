@@ -1,8 +1,9 @@
 ---
 layout: wiki
 title: "语义分割之 DeepLabV3+"
-categories: Tutorial
+categories: [语义分割, DeepLab, 教程]
 filename: 2020-03-15-deeplab
+description: 语义分割是计算机视觉的一项重要任务，本教程使用`Jittor`框架实现了`DeepLabV3+语义分割`模型。
 ---
 
 

@@ -17,6 +17,7 @@ from jittor import nn, Module, init
 The following code defines our model, which is a two-layer neural network. The size of hidden layer is 10. and the activation function is relu.
 
 ```
+
 ### model define
 
 class Model(Module):

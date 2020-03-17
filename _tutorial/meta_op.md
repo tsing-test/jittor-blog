@@ -2,6 +2,7 @@
 layout: wiki
 title: "Meta-operator: Implement your own convolution with Meta-operator"
 categories: Tutorial
+filename: meta_op
 ---
 
 # Meta-operator: Implement your own convolution with Meta-operator
@@ -9,10 +10,13 @@ categories: Tutorial
 Meta-operator is a key concept of jittor, The hierarchical architecture of meta-operators is shown below.
 
 The meta-operators are consist of reindex, reindex-reduce and element-wise operators. Reindex and reindex-reduce operators are both unary operators. The reindex operator is a one-to-many mapping between its input and output. And the reindex-reduce operator is a many-to-one mapping. Broadcast, pad and slice operators are common reindex operators. And reduce, product and sum are common reindex-reduce operators. Element-wise operator is the third component of meta-operators. Compared to the first two, element-wise operators may contain multiple inputs. But all the input and output shapes of C must be the same. And they are one-to-one mapped. For example, the addition of two variables is a binary element-wise operator.
-> ![](./figs/mop.svg)
+
+<img src="/images/tutorial/{{ page.filename }}/mop.svg">
+
 > The hierarchical architecture of meta-operators. The meta-operators are consist of reindex, reindex-reduce and element-wise operators. Reindex and reindex-reduce are each other's backward operators. The backward operators of element-wise operators are itself. Those meta-operators are fused into common DL operations, and these DL operators further constitute the model.
         
-In the previous [example](example.ipynb), we have demonstrated how to implement matrix multiplication via three meta-operators:
+
+In the previous [example]({{ site.url }}/tutorial/example/), we have demonstrated how to implement matrix multiplication via three meta-operators:
 
 ```
 def matmul(a, b):

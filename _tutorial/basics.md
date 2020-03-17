@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: "Basics: Op, Var and var_scope"
+title: "Basics: Op, Var"
 categories: Tutorial
 ---
 
@@ -20,6 +20,7 @@ print (a.data)
 # Output: float32[3,]
 # Output: [ 1. 2. 3.]
 ```
+
 ## Op
  jittor'op is simular with numpy. Let's try some operations. We create Var `a` and `b` via operation `jt.float32`, and add them. Printing those variables shows they have the same shape and dtype.
 

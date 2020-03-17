@@ -38,17 +38,17 @@ navs:
     href: /tutorial/
     label: 教程
 
-  # -
-  #   href: /docs/
-  #   label: 文档
+  -
+    href: /download/
+    label: 下载
 
   -
     href: /blog/
     label: 博客
 
-  -
-    href: /categories/
-    label: 分类
+  # -
+  #   href: /categories/
+  #   label: 分类
 
 
 #   -

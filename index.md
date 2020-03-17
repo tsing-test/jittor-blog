@@ -4,24 +4,15 @@ css: ['pages/index.css']
 comments: false
 ---
 
-
-
 # Jittor: a Just-in-time(JIT) deep learning framework
 
-# Jittor: 即时编译深度学习框架
-
-[Quickstart](#quickstart) | [Install](#install) | [Tutorial](#tutorial) | [快速开始](#快速开始) | [安装](#安装) | [教程](#教程)
 
 Jittor is a high-performance deep learning framework based on JIT compiling and meta-operators. The whole framework and meta-operators are compiled just-in-time. A powerful op compiler and tuner are integrated into Jittor. It allowed us to generate high-performance code with specialized for your model.
 
-Jittor 是一个基于即时编译和元算子的高性能深度学习框架，整个框架在即时编译的同时，还集成了强大的Op编译器和调优器，为您的模型生成定制化的高性能代码。
 
 The front-end language is Python. Module Design is used in the front-end, like PyTorch and Keras. The back-end is implemented py high performance language, such as CUDA,C++.
-Jittor前端语言为Python。前端使用了模块化的设计，类似于PyTorch，Keras，后端则使用高性能语言编写，如CUDA，C++。
 
 The following example shows how to model a two-layer neural network step by step and train from scratch In a few lines of Python code.
-下面的代码演示了如何一步一步使用Python代码，从头对一个双层神经网络建模。
-
 
 ```python
 import jittor as jt
@@ -54,7 +45,6 @@ for i,(x,y) in enumerate(get_data(n)):
     loss_mean = loss.mean()
     optim.step (loss_mean)
     print(f"step {i}, loss = {loss_mean.data.sum()}")
-
 ```
 
 ## Contents
@@ -65,16 +55,6 @@ for i,(x,y) in enumerate(get_data(n)):
 * [Contributing](#contributing)
 * [The Team](#theteam)
 * [License](#license)
-
-
-## 大纲
-* [Quickstart](#quickstart)
-* [Install](#install)
-* [Tutorial](#tutorial)
-* [Contributing](#contributing)
-* [The Team](#theteam)
-* [License](#license)
-
 
 ## Quickstart
 
@@ -104,7 +84,6 @@ git clone https://git.net9.org/cjld/jittor.git && with_clang=1 bash ./jittor/scr
 git clone https://git.net9.org/cjld/jittor.git && with_gcc=1 with_cuda=1 bash ./jittor/script/install.sh
 # install with g++
 git clone https://git.net9.org/cjld/jittor.git && with_gcc=1 bash ./jittor/script/install.sh
-
 ```
 After execution, the script will show some environment variables you need to export.
 
@@ -121,7 +100,6 @@ sudo apt install g++ build-essential libomp-dev
 # OR clang-8
 wget -O - https://apt.llvm.org/llvm.sh > /tmp/llvm.sh
 bash /tmp/llvm.sh 8
-
 ```
 if you choose icc as the back-end compiler, please go to the [offical icc install page](https://software.intel.com/en-us/cpp-compiler-developer-guide-and-reference-compiler-setup).
 
@@ -130,7 +108,6 @@ Jittor need python version >= 3.7.
 
 ```bash
 sudo apt install python3.7 python3.7-dev
-
 ```
 
 ### Step 3: Run Jittor
@@ -147,7 +124,6 @@ export cc_path="clang-8"
 
 # run a simple test
 python3.7 -m jittor.test.test_example
-
 ```
 if the test is passed, your Jittor is ready.
 
@@ -159,14 +135,12 @@ Using CUDA in Jittor is very simple, Just setup environment value `nvcc_path`
 export nvcc_path="/usr/local/cuda/bin/nvcc" 
 # run a simple cuda test
 python3.7 -m jittor.test.test_cuda 
-
 ```
 if the test is passed, your can use Jittor with CUDA by setting `use_cuda` flag.
 
 ```python
 import jittor as jt
 jt.flags.use_cuda = 1
-
 ```
 
 ### Optional Step 5: Run full tests
@@ -174,7 +148,6 @@ To check the integrity of Jittor, we can run full tests.
 
 ```bash
 python3.7 -m jittor.test -v
-
 ```
 if those tests are failed, please report bugs for us, and feel free to contribute ^_^
 
@@ -190,7 +163,6 @@ To train your model with Jittor, there are only three main concepts you need to 
 
 Var is the basic data type of jittor. Computation process in Jittor is asynchronous for optimization. If you want to access the data, `Var.data` can be used for synchronous data accessing.
 
-
 ```python
 import jittor as jt
 a = jt.float32([1,2,3])
@@ -198,17 +170,14 @@ print (a)
 print (a.data)
 # Output: float32[3,]
 # Output: [ 1. 2. 3.]
-
 ```
 
 And we can give the variable a name
-
 
 ```python
 c.name('c')
 print(c.name())
 # Output: c
-
 ```
 
 
@@ -225,20 +194,16 @@ print(a,b,c)
 print(type(a), type(b), type(c))
 # Output: float32[3,] float32[3,] float32[3,]
 # Output: <class 'jittor_core.Var'> <class 'jittor_core.Var'> <class 'jittor_core.Var'>
-
 ```
 Beside that, All the operators we used jt.xxx(Var, ...) have alias Var.xxx(...). For example:
-
 
 ```python
 c.max() # alias of jt.max(a)
 c.add(a) # alias of jt.add(c, a)
 c.min(keepdims=True) # alias of jt.min(c, keepdims=True)
-
 ```
 
 if you want to know all the operation which Jittor supports. try `help(jt.ops)`. All the operation you found in `jt.ops.xxx`, can be used via alias `jt.xxx`
-
 
 ```python
 help(jt.ops)
@@ -248,7 +213,6 @@ help(jt.ops)
 #   array(data: array) -> core.Var
 #   binary(x: core.Var, y: core.Var, op: str) -> core.Var
 #   ......
-
 ```
 
 ### More
@@ -261,15 +225,14 @@ If you want to know more about Jittor, please check out the notebooks below:
     * [Meta-operator: Implement your own convolution with Meta-operator][3]
 * Advanced
     * [Custom Op: write your operator with C++ and CUDA and JIT compile it][4]
-    * [Profiler: Profiling your model][5]
+    * Profiler: Profiling your model
     * Jtune: Tool for performance tuning
 
 
-[1]: notebooks/example.md
-[2]: notebooks/basics.md
-[3]: notebooks/meta_op.md
-[4]: notebooks/custom_op.md
-[5]: notebooks/profiler.md
+[1]: {{ site.url }}/tutorial/example/
+[2]: {{ site.url }}/tutorial/basics/
+[3]: {{ site.url }}/tutorial/meta_op/
+[4]: {{ site.url }}/tutorial/custom_op/
 
 Those notebooks can be started in your own computer by `python3.7 -m jittor.notebook`
 

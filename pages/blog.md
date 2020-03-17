@@ -23,7 +23,6 @@ permalink: /blog/
     </div>
 </section>
 
-
 <!-- /.banner -->
 <section class="container content">
     <div class="columns">
@@ -35,7 +34,8 @@ permalink: /blog/
                       <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
                     </h3>
                     <p class="repo-list-description">
-                        {{ post.excerpt | strip_html | strip }}
+                        <!-- {{ post.excerpt | strip_html | strip | truncatewords: 50 }} -->
+                        {{ post.description | strip_html | strip }}
                     </p>
                     <p class="repo-list-meta">
                         <span class="meta-info">
@@ -52,11 +52,19 @@ permalink: /blog/
                 {% endfor %}
             </ol>
         </div>
-        <!-- <div class="column one-third">
+        <div class="column one-third">
+            <h3>View</h3>
+            <div id="blog-categories">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="{{ site.url }}/categories/">分类阅读博客</a>
+                    </li>
+                </ul>
+            </div>
             {% include sidebar-search.html %}
-            {% include sidebar-qrcode.html %}
-            {% include sidebar-popular-repo.html %}
-        </div> -->
+            <!-- {% include sidebar-qrcode.html %}
+            {% include sidebar-popular-repo.html %} -->
+        </div>
     </div>
     <section class="container content">
     <div class="columns">
