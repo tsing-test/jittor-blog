@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: ""
-url: 
+url: https://zhouwy19.github.io/
 date_format: "ordinal"
 title: Jittor
 subtitle: "Jittor"
